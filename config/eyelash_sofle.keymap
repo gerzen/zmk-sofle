@@ -3,18 +3,19 @@
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+
+#define ZMK_HELPER_KEEP_NATIVE 1
+#define HOST_OS 2
+
+#include "zmk-helpers/helper.h"
+#include "zmk-helpers/unicode-chars/german.dtsi"
+#include "zmk-helpers/unicode-chars/russian.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-
-#define ZMK_HELPER_KEEP_NATIVE 1
-#define HOST_OS 2
-#include "zmk-helpers/helper.h"
-#include "zmk-helpers/unicode-chars/german.dtsi"
-#include "zmk-helpers/unicode-chars/russian.dtsi"
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -44,6 +45,20 @@
     behaviors {
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo_to_l3 {
+            bindings = <&to 3>;
+            key-positions = <55 61>;
+        };
+
+        combo_to_l0 {
+            bindings = <&to 0>;
+            key-positions = <56 60>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -63,7 +78,7 @@
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &kp DELETE
 &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &de_eszett          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &kp TILDE        &de_eszett      &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
@@ -86,11 +101,12 @@
 
         layer_3 {
             bindings = <
-&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE
-&ru_y  &ru_ts  &ru_u  &ru_k  &ru_ye  &ru_n        &trans  &ru_g  &ru_sh  &ru_shch  &ru_z  &ru_kh  &ru_tone
-&ru_yo &ru_f  &ru_bi  &ru_v  &ru_a  &ru_p         &trans  &ru_r  &ru_o  &ru_l  &ru_d  &ru_zh  &ru_e
-&kp LSHFT  &ru_ya  &ru_ch  &ru_s  &ru_m  &ru_i    &trans  &ru_t  &ru_soft  &ru_b  &ru_yu  &trans  &kp RSHFT
-&kp CAPS  &trans  &trans  &trans  &trans  &kp SPACE    &trans  &kp ENTER  &kp SPACE  &trans  &trans  &trans >;
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5       &trans  &kp N6     &kp N7     &kp N8    &kp N9  &kp N0  &kp BACKSPACE
+&ru_y      &ru_ts  &ru_u   &ru_k   &ru_ye  &ru_n        &trans  &ru_g      &ru_sh     &ru_shch  &ru_z   &ru_kh  &ru_tone
+&ru_yo     &ru_f   &ru_bi  &ru_v   &ru_a   &ru_p        &trans  &ru_r      &ru_o      &ru_l     &ru_d   &ru_zh  &ru_e
+&kp LSHFT  &ru_ya  &ru_ch  &ru_s   &ru_m   &ru_i        &trans  &ru_t      &ru_soft   &ru_b     &ru_yu  &trans  &kp RSHFT
+&kp CAPS   &trans  &trans  &trans  &trans  &kp SPACE    &trans  &kp ENTER  &kp SPACE  &trans    &trans  &trans
+            >;
         };
     };
 };
