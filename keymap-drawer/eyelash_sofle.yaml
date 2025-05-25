@@ -265,3 +265,5 @@ combos:
   k: {t: '3', h: toggle}
 - p: [56, 60]
   k: {t: LAYER0, h: toggle}
+- p: [39, 51]
+  k: RGB ON
