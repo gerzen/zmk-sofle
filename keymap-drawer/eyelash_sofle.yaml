@@ -260,9 +260,3 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-combos:
-- p: [62, 55]
-  k: {t: '3', h: toggle}
-  l: ['3']
-- p: [60, 56]
-  k: {t: LAYER0, h: toggle}
