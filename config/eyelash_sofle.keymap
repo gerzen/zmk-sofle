@@ -38,6 +38,21 @@
     behaviors {
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo_layer_3 {
+            bindings = <&to 3>;
+            key-positions = <62 55>;
+            layers = <3>;
+        };
+
+        combo_layer_1 {
+            bindings = <&to 1>;
+            key-positions = <60 56>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
