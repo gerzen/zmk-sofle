@@ -101,11 +101,11 @@
 
         layer_3 {
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5       &trans  &kp N6     &kp N7     &kp N8    &kp N9  &kp N0  &kp BACKSPACE
-&ru_y      &ru_ts  &ru_u   &ru_k   &ru_ye  &ru_n        &trans  &ru_g      &ru_sh     &ru_shch  &ru_z   &ru_kh  &ru_tone
-&ru_yo     &ru_f   &ru_bi  &ru_v   &ru_a   &ru_p        &trans  &ru_r      &ru_o      &ru_l     &ru_d   &ru_zh  &ru_e
-&kp LSHFT  &ru_ya  &ru_ch  &ru_s   &ru_m   &ru_i        &trans  &ru_t      &ru_soft   &ru_b     &ru_yu  &trans  &kp RSHFT
-&kp CAPS   &trans  &trans  &trans  &trans  &kp SPACE    &trans  &kp ENTER  &kp SPACE  &trans    &trans  &trans
+&kp ESC    &kp N1    &kp N2  &kp N3  &kp N4  &kp N5       &trans  &kp N6     &kp N7     &kp N8    &kp N9  &kp N0  &kp BACKSPACE
+&ru_y      &ru_ts    &ru_u   &ru_k   &ru_ye  &ru_n        &trans  &ru_g      &ru_sh     &ru_shch  &ru_z   &ru_kh  &ru_tone
+&ru_yo     &ru_f     &ru_bi  &ru_v   &ru_a   &ru_p        &trans  &ru_r      &ru_o      &ru_l     &ru_d   &ru_zh  &ru_e
+&kp LSHFT  &ru_ya    &ru_ch  &ru_s   &ru_m   &ru_i        &trans  &ru_t      &ru_soft   &ru_b     &ru_yu  &trans  &kp RSHFT
+&kp CAPS   &kp CAPS  &trans  &trans  &trans  &kp SPACE    &trans  &kp ENTER  &kp SPACE  &trans    &trans  &trans
             >;
         };
     };
