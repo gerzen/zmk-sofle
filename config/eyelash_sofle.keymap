@@ -18,10 +18,10 @@
 #include "zmk-helpers/key-labels/sofle.h"
 
 #undef COMBO_TERM
-#define COMBO_TERM 50
+#define COMBO_TERM 100
 
-ZMK_COMBO(layer3,  &to 3, LH2 RH2)
-ZMK_COMBO(layer0, &to 0, LH1 RH1)
+ZMK_COMBO(layer3, &to 3, LH2 RH2, ALL)
+ZMK_COMBO(layer0, &to 0, LH1 RH1, ALL)
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -49,21 +49,6 @@ ZMK_COMBO(layer0, &to 0, LH1 RH1)
     };
 
     behaviors {
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        combo_layer_3 {
-            bindings = <&to 3>;
-            key-positions = <62 55>;
-            layers = <3>;
-        };
-
-        combo_layer_0 {
-            bindings = <&to 0>;
-            key-positions = <60 56>;
-        };
     };
 
     keymap {
