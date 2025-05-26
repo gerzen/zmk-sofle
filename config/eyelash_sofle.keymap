@@ -7,16 +7,15 @@
 #define ZMK_HELPER_KEEP_NATIVE 1
 #define HOST_OS 2
 
-
+#include "zmk-helpers/helper.h"
+#include "zmk-helpers/unicode-chars/german.dtsi"
+#include "zmk-helpers/unicode-chars/russian.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "zmk-helpers/helper.h"
-#include "zmk-helpers/unicode-chars/german.dtsi"
-#include "zmk-helpers/unicode-chars/russian.dtsi"
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -111,7 +110,7 @@
 &ru_y      &ru_ts    &ru_u   &ru_k   &ru_ye  &ru_n        &trans  &ru_g      &ru_sh     &ru_shch  &ru_z   &ru_kh  &ru_tone
 &ru_yo     &ru_f     &ru_bi  &ru_v   &ru_a   &ru_p        &trans  &ru_r      &ru_o      &ru_l     &ru_d   &ru_zh  &ru_e
 &kp LSHFT  &ru_ya    &ru_ch  &ru_s   &ru_m   &ru_i        &trans  &ru_t      &ru_soft   &ru_b     &ru_yu  &trans  &kp RSHFT
-&kp CAPS   &kp CAPS  &trans  &trans  &trans  &kp SPACE    &trans  &kp ENTER  &kp SPACE  &trans    &trans  &trans
+&kp CAPS   &kp CAPS  &trans  &to 0   &trans  &kp SPACE    &trans  &kp ENTER  &kp SPACE  &to 0     &trans  &trans
             >;
         };
     };
