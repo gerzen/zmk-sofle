@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-caps$$
+  - '&macro_caps_rgb_toggle'
   - A
   - S
   - D
@@ -249,7 +249,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-caps$$
-  - $$mdi:apple-keyboard-caps$$
+  - '&macro_caps_rgb_toggle'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: LAYER0, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
