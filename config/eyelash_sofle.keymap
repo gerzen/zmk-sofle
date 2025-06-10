@@ -69,7 +69,8 @@
         macro_caps_rgb_toggle: macro_rgb_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_TOG &kp CAPS>;
+            bindings = <&rgb_ug RGB_TOG>
+                       ,<&kp CAPS>;
             label = "MACRO_RGB_TOGGLE";
         };
     };
