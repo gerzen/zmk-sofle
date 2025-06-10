@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - {t: \, s: '|'}
-  - '&macro_caps_rgb_toggle'
+  - $$mdi:apple-keyboard-caps$$
   - A
   - S
   - D
@@ -265,5 +265,3 @@ combos:
   k: {t: '3', h: toggle}
 - p: [56, 60]
   k: {t: LAYER0, h: toggle}
-- p: [39, 51]
-  k: RGB ON
