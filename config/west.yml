@@ -21,8 +21,8 @@ manifest:
       remote: zmkfirmware
       revision: 0.3.0
       import: app/west.yml
-    - name: zmk-helpers
-      remote: urob
-      revision: main
+#    - name: zmk-helpers
+#      remote: urob
+#      revision: main
   self:
-    path: config
+    path: boards
