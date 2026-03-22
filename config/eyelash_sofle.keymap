@@ -50,6 +50,7 @@
         compatible = "zmk,combos";
 
         combo_to_l3 {
+            timeout-ms = <500>;
             bindings = <&to 3>;
             key-positions = <55 61>;
         };
@@ -64,6 +65,7 @@
         macro_caps_rgb_toggle: macro_rgb_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            tap-ms = <180>;
             bindings = <&rgb_ug RGB_TOG>
                        ,<&kp CAPS>;
             label = "MACRO_RGB_TOGGLE";
