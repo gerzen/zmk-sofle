@@ -25,4 +25,4 @@ manifest:
       remote: urob
       revision: main
   self:
-    path: boards
+    path: config
